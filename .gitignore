@@ -1,0 +1,11 @@
+eclipse/
+CREDITS-fml.txt
+LICENSE-fml.txt
+forge*changelog.txt
+MinecraftForge*.txt
+bin/
+build/
+.gradle/
+README.txt  # forge's readme
+
+.DS_Store

@@ -1,0 +1,19 @@
+[
+{
+"modid": "colecf.Safechat",
+"name": "Safechat",
+"description": "Blocks swear words from multiplayer chat.",
+"version": "1.6.4",
+"credits": "",
+"logoFile": "safechat_logo.png",
+"mcversion": "1.6.4",
+"url": "http://www.minecraftforum.net/topic/1314911-132-safechat/",
+"updateUrl": "",
+"authors": [ "Colecf" ],
+"parent":"",
+"screenshots": [],
+"dependencies": [
+         "mod_MinecraftForge"
+]
+}
+]
