@@ -1,4 +1,5 @@
 eclipse/
+.gradel/
 CREDITS-fml.txt
 LICENSE-fml.txt
 forge*changelog.txt
@@ -8,4 +9,4 @@ build/
 .gradle/
 README.txt  # forge's readme
 
-.DS_Store
+.DS_Store 

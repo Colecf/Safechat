@@ -1,23 +1,17 @@
 package colecf.safechat;
 
-import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.Properties;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.gui.GuiIngame;
-import net.minecraft.client.gui.GuiNewChat;
-import net.minecraft.util.StringTranslate;
+import net.minecraft.util.ChatComponentText;
 import net.minecraftforge.client.event.ClientChatReceivedEvent;
-import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 public class ChatEvents
@@ -56,8 +50,8 @@ public class ChatEvents
 	
 	@SubscribeEvent
 	public void chatReceived(ClientChatReceivedEvent event)
-	{/*
-		String s = ChatMessageComponent.createFromJson(event.message).toStringWithFormatting(true);
+	{
+		String s = event.message.getFormattedText()+" ";
 		
 		boolean deleteWholeWord = false;
         if(deleteWholeWordString.equals("true"))
@@ -142,9 +136,9 @@ public class ChatEvents
 		event.setCanceled(true);
 		if (!abort)
 		{
-			
-			Minecraft.getMinecraft().ingameGUI.getChatGUI().printChatMessage(s);
-		}*/
+			ChatComponentText text = new ChatComponentText(s);
+			Minecraft.getMinecraft().ingameGUI.getChatGUI().printChatMessage(text);
+		}
 	}
 	
 	private int findSpaceBefore(String s, int index)
