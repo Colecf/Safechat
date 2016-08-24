@@ -1,3 +1,8 @@
+.classpath
+LICENSE*.txt
+Paulscode*.txt
+run/
+
 eclipse/
 .gradel/
 CREDITS-fml.txt
@@ -7,6 +12,6 @@ MinecraftForge*.txt
 bin/
 build/
 .gradle/
-README.txt  # forge's readme
+README.txt
 
 .DS_Store 

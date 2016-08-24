@@ -13,7 +13,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 
-@Mod(modid="colecf.Safechat", name="Safechat", version="1.3.2")
+@Mod(modid="colecf.Safechat", name="Safechat", version="1.10.2")
 public class Safechat
 {
 

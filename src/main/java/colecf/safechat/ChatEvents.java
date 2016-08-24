@@ -10,7 +10,8 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import net.minecraft.client.Minecraft;
-import net.minecraft.util.ChatComponentText;
+import net.minecraft.util.text.ITextComponent;
+import net.minecraft.util.text.TextComponentString;
 import net.minecraftforge.client.event.ClientChatReceivedEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
@@ -51,7 +52,7 @@ public class ChatEvents
 	@SubscribeEvent
 	public void chatReceived(ClientChatReceivedEvent event)
 	{
-		String s = event.message.getFormattedText()+" ";
+		String s = event.getMessage().getFormattedText()+" ";
 		
 		boolean deleteWholeWord = false;
         if(deleteWholeWordString.equals("true"))
@@ -136,7 +137,7 @@ public class ChatEvents
 		event.setCanceled(true);
 		if (!abort)
 		{
-			ChatComponentText text = new ChatComponentText(s);
+			TextComponentString text = new TextComponentString(s);
 			Minecraft.getMinecraft().ingameGUI.getChatGUI().printChatMessage(text);
 		}
 	}
