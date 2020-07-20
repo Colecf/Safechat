@@ -3,6 +3,7 @@ LICENSE*.txt
 Paulscode*.txt
 run/
 
+.idea/
 eclipse/
 .gradel/
 CREDITS-fml.txt
